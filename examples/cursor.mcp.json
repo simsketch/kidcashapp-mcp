@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "kidcash": {
+      "url": "https://www.kidcashapp.com/api/agent/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_KIDCASH_API_KEY"
+      }
+    }
+  }
+}

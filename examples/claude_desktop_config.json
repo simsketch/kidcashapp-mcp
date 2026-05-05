@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "kidcash": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://www.kidcashapp.com/api/agent/mcp",
+        "--header",
+        "Authorization: Bearer YOUR_KIDCASH_API_KEY"
+      ]
+    }
+  }
+}
