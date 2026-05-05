@@ -77,25 +77,25 @@ Listed at [smithery.ai/server/kidcashapp/kidcash-mcp](https://smithery.ai/server
 
 | Tool | Description |
 |---|---|
-| `list_kids` | All kids on the account with balances |
-| `get_kid` | One kid in detail (transactions, wishlist, chores) |
-| `get_settings` | Currency, theme, feature toggles |
-| `list_pending_chores` | Chore completions awaiting parent approval |
-| `get_transactions` | Per-kid transaction history with optional date filter |
+| `kids.list` | All kids on the account with balances |
+| `kids.get` | One kid in detail (transactions, wishlist, chores) |
+| `settings.get` | Currency, theme, feature toggles |
+| `chores.pending` | Chore completions awaiting parent approval |
+| `transactions.list` | Per-kid transaction history with optional date filter |
 
 ### Write (7 tools, all reversible from the dashboard)
 
 | Tool | Description |
 |---|---|
-| `add_money` | Credit a kid's balance (chores, allowance, gifts) |
-| `subtract_money` | Debit a kid's balance (purchases, fines) |
-| `transfer_between_accounts` | Move between checking, savings, charity for one kid |
-| `approve_chore` | Approve a pending chore (auto-credits if value > 0) |
-| `reject_chore` | Reject a pending chore |
-| `add_wishlist_item` | Add a savings goal to a kid's wishlist |
-| `remove_wishlist_item` | Remove a savings goal |
+| `transactions.add` | Credit a kid's balance (chores, allowance, gifts) |
+| `transactions.subtract` | Debit a kid's balance (purchases, fines) |
+| `transactions.transfer` | Move between checking, savings, charity for one kid |
+| `chores.approve` | Approve a pending chore (auto-credits if value > 0) |
+| `chores.reject` | Reject a pending chore |
+| `wishlist.add` | Add a savings goal to a kid's wishlist |
+| `wishlist.remove` | Remove a savings goal |
 
-Each write tool is annotated `readOnlyHint: false` per the MCP spec; `reject_chore` and `remove_wishlist_item` additionally carry `destructiveHint: true` so MCP clients surface a confirmation before invoking. All money tools cap individual transactions at $10,000 in their descriptions to guard against LLM amount mishearings.
+Each write tool is annotated `readOnlyHint: false` per the MCP spec; `chores.reject` and `wishlist.remove` additionally carry `destructiveHint: true` so MCP clients surface a confirmation before invoking. All money tools cap individual transactions at $10,000 in their descriptions to guard against LLM amount mishearings.
 
 ## Source
 
