@@ -1,5 +1,7 @@
 # KidCash MCP
 
+[![smithery badge](https://smithery.ai/badge/kidcashapp/kidcash-mcp)](https://smithery.ai/servers/kidcashapp/kidcash-mcp)
+
 The official [Model Context Protocol](https://modelcontextprotocol.io) server for [KidCash](https://www.kidcashapp.com) — manage your kids' allowances, chores, wishlists, and balances from any AI assistant.
 
 > Connect Claude, Cursor, Windsurf, or any MCP-compatible client and ask things like:
